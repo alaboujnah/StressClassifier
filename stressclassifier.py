@@ -2,7 +2,7 @@
 
 import pandas as pd
 import sklearn.utils
-#from datashape import  np
+from datashape import  np
 from sklearn import metrics, svm
 from sklearn.metrics import confusion_matrix
 from sklearn.svm import SVC
