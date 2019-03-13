@@ -1,2 +1,14 @@
 # StressClassifier
-« Classification multi-classes en utilisant le K-means  »  Dans ce test nous avons abordé un problème de classification multi-classes puisque la base de données s’agit de plusieurs modèles de pieds que bien évidemment appartiennent à un nombre de classes supérieur à deux.  Afin d’effectuer cette classification on a eu recours à la méthode de K-means parceque c’est une simple méthode que peut nous fournir un bon clustering des données. Pour bien préparer les données au clustering, j’ai suit 3 étapes :  I. Sélection des attributs les plus significatifs : La base de données qui nous a été fourni contient plusieurs caractéristiques. Mais le choix des attributs est très important ici, pour ne pas tomber dans la redondance et pour avoir une meilleur classification. Du coup j’ai choisi comme attributs : archLength, footLength, metaLength, heelWidth et je n’ai pas choisi le fingerlength parceque le footlength contient déjà le fingerlength. Et puis j’ai mis tous ces attributs ensemble dans une matrice attributs_matrix.   II. Normalisation des données : C’est une étape fondamentale pour éviter les classifications naïves. Donc j’ai choisi de normaliser les données par la division de toutes les grandeurs associées à un pied par la longueur du pied
+
+« Classification 2-classes en utilisant SVM  » 
+
+%By Alaeddine BOUJNAH
+
+Dans ce test nous avons abordé un problème de classification 2-classes puisque la base de données s’agit de plusieurs échantillons mésurés (1420 samples) que bien évidemment appartiennent à un nombre de classe égale à deux.  Afin d’effectuer cette classification on a eu recours à un algorithme supervisé de Machine Learning SVM de classification parceque c’est une simple méthode que peut nous fournir un bon clustering des données et quand il s'agit un dual probléme,l'usage de kernel trick rend la classification plus efficace et l'optimal margin gap entre les hyperplans séparés elle fait une meilleure prédiction avec un test data ce que le rend plus robuste et avec une haute accurancy.
+Pour bien préparer les données au clustering,on sélectionne des attributs les plus significatifs:le choix des attributs est très important, pour ne pas tomber dans la redondance et pour avoir une meilleur classification. Dans notre cas admettons que nos 4 features sont significatifs indépendants (bpm,rmssd,bsv,sdnn)
+
+#Pyhton 
+using scikit-learn de Python
+Préparer train/test data,créer une instance de SVM et fit out data avec un linear kernel et un paramétre de régularisation=0.1
+
+On obtient un accurancy score de 94%
